@@ -1,0 +1,25 @@
+{
+  "name": "fluo-example",
+  "version": "1.0.0",
+  "description": "an example app build upon the Fluo data flow library",
+  "dependencies": {
+    "fluo": "*",
+    "inherits": "*",
+    "ioc-container": "*",
+    "react": "*",
+    "reacto": "*"
+  },
+  "devDependencies": {
+    "browserify": "*",
+    "expect.js": "*",
+    "mocha": "*",
+    "watch": "*"
+  },
+  "scripts": {
+    "build": "./build/build.sh",
+    "build-test-unit": "./build/build-test-unit.sh",
+    "autobuild": "./node_modules/.bin/watch ./build/build.sh ./app/js",
+    "test": "npm run test-unit",
+    "test-unit": "npm run build-test-unit; open ./app/test/index.html"
+  }
+}
