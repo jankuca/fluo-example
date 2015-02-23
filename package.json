@@ -25,6 +25,7 @@
     "autobuild": "./node_modules/.bin/watch ./build/build.sh ./app/js",
     "test": "npm run test-unit",
     "test-unit": "mocha -t 2000 --recursive test",
+    "test-browser": "npm run test-unit-browser",
     "test-unit-browser": "npm run build-test-unit; open ./app/test/index.html"
   }
 }
