@@ -12,14 +12,19 @@
   "devDependencies": {
     "browserify": "*",
     "expect.js": "*",
+    "jsdom": "*",
     "mocha": "*",
     "watch": "*"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
   },
   "scripts": {
     "build": "./build/build.sh",
     "build-test-unit": "./build/build-test-unit.sh",
     "autobuild": "./node_modules/.bin/watch ./build/build.sh ./app/js",
     "test": "npm run test-unit",
-    "test-unit": "npm run build-test-unit; open ./app/test/index.html"
+    "test-unit": "mocha -t 2000 --recursive test",
+    "test-unit-browser": "npm run build-test-unit; open ./app/test/index.html"
   }
 }
